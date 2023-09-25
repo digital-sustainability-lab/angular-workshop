@@ -1,5 +1,9 @@
 <div class="container">
-  <mat-card *ngFor="let card of data">
+  <mat-card
+    *ngFor="let card of data"
+    [ngClass]="card?.class"
+    [ngStyle]="{ color: card?.color }"
+  >
     <mat-card-content *ngIf="card?.show">
       Ich bin eine Karte :)
     </mat-card-content>

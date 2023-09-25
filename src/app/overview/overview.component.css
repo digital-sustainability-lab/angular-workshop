@@ -8,3 +8,15 @@ mat-card {
   display: flex;
   flex-direction: row;
 }
+.normal {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.special {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  font-style: oblique;
+  text-decoration: underline overline;
+}
