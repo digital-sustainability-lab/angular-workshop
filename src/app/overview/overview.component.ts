@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class OverviewComponent {
   label: string = 'this is a toggle';
   checked: boolean = true;
-
+  attribute: string = 'color';
   data = [
     {
       title: 'Fancy first blog post',

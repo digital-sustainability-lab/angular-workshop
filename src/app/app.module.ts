@@ -1,3 +1,4 @@
+import { MatSelectModule } from '@angular/material/select';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -27,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
