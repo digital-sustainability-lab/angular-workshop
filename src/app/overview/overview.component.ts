@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class OverviewComponent {
   label: string = 'this is a toggle';
+  checked: boolean = true;
 }
