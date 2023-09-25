@@ -1,6 +1,8 @@
 <div class="container">
-  <mat-card *ngFor="let card of data"
-    ><mat-card-content>Ich bin eine Karte :)</mat-card-content></mat-card
-  >
+  <mat-card *ngFor="let card of data">
+    <mat-card-content *ngIf="card?.show">
+      Ich bin eine Karte :)
+    </mat-card-content>
+  </mat-card>
 </div>
 <button mat-button (click)="navigateToDetail(1)">navigate to post #1</button>
