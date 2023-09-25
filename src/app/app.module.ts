@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DetailComponent } from './detail/detail.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule,
     MatMenuModule,
     MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,6 @@
-<mat-slide-toggle [checked]="checked" color="warning" labelPosition="before">{{
-  label
-}}</mat-slide-toggle>
+<div class="container">
+  <mat-card *ngFor="let card of data"
+    ><mat-card-content>Ich bin eine Karte :)</mat-card-content></mat-card
+  >
+</div>
 <button mat-button (click)="navigateToDetail(1)">navigate to post #1</button>
