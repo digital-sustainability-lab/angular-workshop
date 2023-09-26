@@ -1,5 +1,5 @@
 <div class="container">
   <ng-container *ngFor="let card of data">
-    <app-card [card]="card"></app-card>
+    <app-card [card]="card" (output)="card.read = $event"></app-card>
   </ng-container>
 </div>

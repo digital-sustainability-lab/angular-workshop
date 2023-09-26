@@ -1,5 +1,17 @@
 import { Component } from '@angular/core';
 
+interface Card {
+  id: number;
+  title: string;
+  description: string;
+  author: string;
+  imageUrl: string;
+  color: string;
+  class: string;
+  show: boolean;
+  read: boolean;
+}
+
 @Component({
   selector: 'app-overview',
   templateUrl: './overview.component.html',
@@ -8,7 +20,7 @@ import { Component } from '@angular/core';
 export class OverviewComponent {
   label: string = 'this is a toggle';
 
-  data = [
+  data: Card[] = [
     {
       id: 1,
       title: 'Fancy first blog post',
@@ -18,6 +30,7 @@ export class OverviewComponent {
       color: 'blue',
       class: 'special',
       show: true,
+      read: false,
     },
     {
       id: 2,
@@ -28,6 +41,7 @@ export class OverviewComponent {
       color: 'black',
       class: 'special',
       show: true,
+      read: false,
     },
     {
       id: 3,
@@ -38,6 +52,7 @@ export class OverviewComponent {
       color: 'green',
       class: 'normal',
       show: false,
+      read: false,
     },
     {
       id: 4,
@@ -48,6 +63,7 @@ export class OverviewComponent {
       color: 'green',
       class: 'normal',
       show: true,
+      read: false,
     },
   ];
 }
