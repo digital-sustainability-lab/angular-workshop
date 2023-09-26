@@ -1,23 +1,5 @@
 <div class="container">
   <ng-container *ngFor="let card of data">
-    <mat-card
-      *ngIf="card?.show"
-      [ngClass]="card?.class"
-      [ngStyle]="{ color: card?.color }"
-    >
-      <mat-card-content>
-        <p>Ich bin eine Karte :)</p>
-        <mat-form-field>
-          <mat-label>Wähle die Schriftfarbe der Karte</mat-label>
-          <mat-select [(value)]="card.color">
-            <mat-option value="green">green</mat-option>
-            <mat-option value="blue">blue</mat-option>
-            <mat-option value="black">black</mat-option>
-            <mat-option value="red">red</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </mat-card-content>
-    </mat-card>
+    <app-card [card]="card"></app-card>
   </ng-container>
 </div>
-<button mat-button (click)="navigateToDetail(1)">navigate to post #1</button>

@@ -12,6 +12,7 @@ import { DetailComponent } from './detail/detail.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
     OverviewComponent,
     NavbarComponent,
     DetailComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-overview',
@@ -8,42 +7,47 @@ import { Router } from '@angular/router';
 })
 export class OverviewComponent {
   label: string = 'this is a toggle';
-  checked: boolean = true;
-  attribute: string = 'color';
+
   data = [
     {
+      id: 1,
       title: 'Fancy first blog post',
       description: 'Hello world! Here I am!',
+      author: 'Amazing, Laura',
+      imageUrl: 'https://cdn2.thecatapi.com/images/34h.jpg',
       color: 'blue',
       class: 'special',
       show: true,
     },
     {
+      id: 2,
       title: 'Fancy second blog post',
       description: 'Hello world! Here I am!',
+      author: 'Excited, John',
+      imageUrl: 'https://cdn2.thecatapi.com/images/9pj.jpg',
       color: 'black',
       class: 'special',
       show: true,
     },
     {
+      id: 3,
       title: 'Fancy third blog post',
       description: 'Hello world! Here I am!',
+      author: 'Mesmerising, Billy',
+      imageUrl: 'https://cdn2.thecatapi.com/images/bhp.jpg',
       color: 'green',
       class: 'normal',
       show: false,
     },
     {
+      id: 4,
       title: 'Fancy fourth blog post',
       description: 'Hello world! Here I am!',
+      author: 'Surprising, Lisa',
+      imageUrl: 'https://cdn2.thecatapi.com/images/eaj.jpg',
       color: 'green',
       class: 'normal',
       show: true,
     },
   ];
-
-  constructor(private router: Router) {}
-
-  navigateToDetail(id: number) {
-    this.router.navigate([`detail/${id}`]);
-  }
 }

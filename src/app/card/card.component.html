@@ -1,0 +1,14 @@
+<mat-card
+  *ngIf="card?.show"
+  (click)="navigateToDetail(card.id)"
+  [ngClass]="card?.class"
+  [ngStyle]="{ color: card?.color }"
+>
+  <mat-card-header class="header">
+    <h4>{{ card.title }}</h4>
+    <p>{{ card.author }}</p>
+  </mat-card-header>
+  <mat-card-content>
+    <img src="{{ card.imageUrl }}" />
+  </mat-card-content>
+</mat-card>
