@@ -23,3 +23,9 @@ img {
   width: 100%;
   height: auto;
 }
+.read {
+  background-color: rgba(211, 211, 211, 0.2);
+}
+.unread {
+  background-color: rgba(190, 230, 173, 0.3);
+}

@@ -18,7 +18,7 @@ export interface Card {
   styleUrls: ['./overview.component.css'],
 })
 export class OverviewComponent {
-  label: string = 'this is a toggle';
+  checked: boolean = true;
 
   data: Card[] = [
     {
@@ -30,7 +30,7 @@ export class OverviewComponent {
       color: 'blue',
       class: 'special',
       show: true,
-      read: false,
+      read: true,
     },
     {
       id: 2,
@@ -63,7 +63,19 @@ export class OverviewComponent {
       color: 'green',
       class: 'normal',
       show: true,
-      read: false,
+      read: true,
     },
   ];
+
+  getSorted() {
+    return this.data.sort((a, b) => {
+      if (a.read && !b.read) {
+        return 1;
+      }
+      if (!a.read && b.read) {
+        return -1;
+      }
+      return 0;
+    });
+  }
 }

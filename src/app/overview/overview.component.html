@@ -1,5 +1,14 @@
-<div class="container">
-  <ng-container *ngFor="let card of data">
-    <app-card [card]="card" (output)="card.read = $event"></app-card>
-  </ng-container>
+<div class="overview">
+  <mat-slide-toggle [(ngModel)]="checked" labelPosition="after">{{
+    checked ? "all" : "unread"
+  }}</mat-slide-toggle>
+  <div class="container">
+    <ng-container *ngFor="let card of getSorted()">
+      <app-card
+        *ngIf="checked ? true : card.read === false"
+        [card]="card"
+        (output)="card.read = $event"
+      ></app-card>
+    </ng-container>
+  </div>
 </div>

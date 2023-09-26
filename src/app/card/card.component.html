@@ -1,7 +1,7 @@
 <mat-card
   *ngIf="card?.show"
+  [ngClass]="card.read ? 'read' : 'unread'"
   (click)="navigateToDetail(card.id)"
-  [ngClass]="card?.class"
   [ngStyle]="{ color: card?.color }"
 >
   <mat-card-header class="header">
