@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface Card {
+export interface Card {
   id: number;
   title: string;
   description: string;

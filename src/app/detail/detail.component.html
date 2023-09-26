@@ -1,1 +1,6 @@
-<p>detail works!</p>
+<div class="detail" *ngIf="currentPost">
+  <h1>{{ currentPost.title }}</h1>
+  <h4>{{ currentPost.author }}</h4>
+  <img src="{{ currentPost.imageUrl }}" />
+  <p>{{ currentPost.description }}</p>
+</div>
