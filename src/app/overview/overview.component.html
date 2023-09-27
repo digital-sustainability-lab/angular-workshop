@@ -7,7 +7,7 @@
       <app-card
         *ngIf="checked ? true : card.read === false"
         [card]="card"
-        (output)="card.read = $event"
+        (output)="setAsRead(card.id)"
       ></app-card>
     </ng-container>
   </div>

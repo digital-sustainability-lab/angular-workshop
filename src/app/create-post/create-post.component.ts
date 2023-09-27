@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-create-post',
@@ -9,7 +10,12 @@ import { NgForm } from '@angular/forms';
 export class CreatePostComponent {
   model: any = {};
 
-  constructor() {}
+  constructor(private backendService: BackendService) {}
 
-  onSubmit(f: NgForm) {}
+  onSubmit(f: NgForm) {
+    if (f.valid) {
+      return this.backendService.storeData(f.value).subscribe(console.log);
+    }
+    return false;
+  }
 }

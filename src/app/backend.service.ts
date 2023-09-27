@@ -15,12 +15,17 @@ export class BackendService {
     );
   }
 
-  patchData(): Observable<Card[]> {
+  patchData(id: number, updatedAttributes: any): Observable<Card[]> {
     return this.http.patch<Card[]>(
-      'https://angular-workshop.dev.digisus-lab.ch/1',
-      {
-        description: 'Hello World! Here I am again :)',
-      }
+      `https://angular-workshop.dev.digisus-lab.ch/${id}`,
+      updatedAttributes
+    );
+  }
+
+  storeData(newPost: Card) {
+    return this.http.post<Card>(
+      'https://angular-workshop.dev.digisus-lab.ch/',
+      newPost
     );
   }
 }

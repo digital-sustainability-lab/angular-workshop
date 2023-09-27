@@ -40,4 +40,8 @@ export class OverviewComponent implements OnInit {
       return 0;
     });
   }
+
+  setAsRead(id: number) {
+    this.backendService.patchData(id, { read: true }).subscribe(console.log);
+  }
 }
