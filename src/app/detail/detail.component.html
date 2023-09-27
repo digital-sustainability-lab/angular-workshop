@@ -1,4 +1,7 @@
 <div class="detail" *ngIf="currentPost">
+  <button (click)="editPost(id)" mat-icon-button>
+    <mat-icon>edit</mat-icon>
+  </button>
   <h1>{{ currentPost.title }}</h1>
   <h4>{{ currentPost.author }}</h4>
   <img src="{{ currentPost.imageUrl }}" />

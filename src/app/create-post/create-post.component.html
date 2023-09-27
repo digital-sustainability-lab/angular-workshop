@@ -1,41 +1,38 @@
-<form class="form" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+<form *ngIf="myForm" class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
   <mat-form-field class="example-full-width">
     <input
+      formControlName="author"
       matInput
       name="author"
       type="text"
       placeholder="author"
-      required
-      ngModel
     />
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <input
+      formControlName="title"
       matInput
       name="title"
       type="text"
       placeholder="title"
-      ngModel
-      required
     />
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <input
+      formControlName="description"
       matInput
       name="description"
       type="text"
       placeholder="description"
-      ngModel
-      required
     />
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <input
+      formControlName="imageUrl"
       matInput
       name="imageUrl"
       type="text"
       placeholder="image url"
-      ngModel
     />
   </mat-form-field>
   <button mat-raised-button>Submit</button>

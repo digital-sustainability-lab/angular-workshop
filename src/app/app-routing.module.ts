@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
   { path: 'detail/:id', component: DetailComponent },
   { path: 'create-post', component: CreatePostComponent },
+  { path: 'edit-post/:id', component: CreatePostComponent },
   { path: '**', redirectTo: 'overview' },
 ];
 

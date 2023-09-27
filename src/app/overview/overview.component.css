@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .overview {
   padding: 0 5rem;

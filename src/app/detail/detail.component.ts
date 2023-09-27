@@ -1,6 +1,6 @@
 import { BackendService } from './../backend.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Card } from '../overview/overview.component';
 
 @Component({
@@ -15,7 +15,8 @@ export class DetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private backendService: BackendService
+    private backendService: BackendService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -29,5 +30,9 @@ export class DetailComponent implements OnInit {
 
   getDetail(id: number) {
     return this.data.find((c) => c.id === id);
+  }
+
+  editPost(id: number) {
+    this.router.navigate([`edit-post/${id}`]);
   }
 }
