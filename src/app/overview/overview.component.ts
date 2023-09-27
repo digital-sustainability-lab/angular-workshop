@@ -23,10 +23,10 @@ export class OverviewComponent implements OnInit {
 
   data: Card[] = [];
 
-  constructor(private bakcendService: BackendService) {}
+  constructor(private backendService: BackendService) {}
 
   ngOnInit(): void {
-    this.data = this.bakcendService.getData();
+    this.backendService.getData().subscribe((data) => (this.data = data));
   }
 
   getSorted() {
