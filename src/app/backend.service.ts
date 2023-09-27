@@ -14,4 +14,13 @@ export class BackendService {
       'https://angular-workshop.dev.digisus-lab.ch/'
     );
   }
+
+  patchData(): Observable<Card[]> {
+    return this.http.patch<Card[]>(
+      'https://angular-workshop.dev.digisus-lab.ch/1',
+      {
+        description: 'Hello World! Here I am again :)',
+      }
+    );
+  }
 }
