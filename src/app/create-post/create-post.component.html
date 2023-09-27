@@ -1,0 +1,42 @@
+<form class="form" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      name="author"
+      type="text"
+      placeholder="author"
+      required
+      ngModel
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      name="title"
+      type="text"
+      placeholder="title"
+      ngModel
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      name="description"
+      type="text"
+      placeholder="description"
+      ngModel
+      required
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      name="imageUrl"
+      type="text"
+      placeholder="image url"
+      ngModel
+    />
+  </mat-form-field>
+  <button mat-raised-button>Submit</button>
+</form>
